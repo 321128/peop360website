@@ -25,8 +25,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: 'Address',
-    details: 'C-5/6 Ground Floor,Vasant Kunj, New Delhi 110070
-',
+    details: 'C-5/6 Ground Floor,Vasant Kunj, New Delhi 110070',
     action: '#'
   }
 ];
