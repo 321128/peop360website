@@ -33,6 +33,13 @@ const pillars = [
     icon: Award,
     features: ['Leadership Development', 'Communication Skills', 'Management Training', 'Compliance Programs']
   }
+    {
+    title: 'AI Services',
+    description: 'Customised Content Generation with efficient subscription packages to fit client requirement.',
+    icon: Award,
+    features: ['Human Resource and Talent Management', 'Operation and supply chain', 'Decision making and startegy', 'Corporate training and well being']
+  }
+  
 ];
 
 const industries = [
