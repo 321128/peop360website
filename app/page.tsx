@@ -16,7 +16,7 @@ const stats = [
 
 const pillars = [
   {
-    title: 'Behavioral Assessments',
+    title: 'Behavioural, Competency and wellness Assessments',
     description: 'Indian-normed, multilingual assessments for leadership profiling, cognitive evaluation, and cultural fit analysis.',
     icon: Users,
     features: ['16-Type Personality Assessment', 'Cognitive & Aptitude Tests', 'Cultural Fit Analysis', 'Wellness Screening']
@@ -33,6 +33,13 @@ const pillars = [
     icon: Award,
     features: ['Leadership Development', 'Communication Skills', 'Management Training', 'Compliance Programs']
   }
+    {
+    title: 'AI Services',
+    description: 'Customised Content Generation with efficient subscription packages to fit client requirement.',
+    icon: Award,
+    features: ['Human Resource and Talent Management', 'Operation and supply chain', 'Decision making and startegy', 'Corporate training and well being']
+  }
+  
 ];
 
 const industries = [
@@ -122,7 +129,7 @@ export default function HomePage() {
       </section>
 
       {/* Partner Logos */}
-      <section className="py-12 bg-gray-50">
+      <section className="hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center text-gray-500 mb-8">Trusted by leading organizations across India</p>
           <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
@@ -140,7 +147,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Three Pillars of Excellence
+              Four Pillars of Excellence
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Our integrated approach combines cutting-edge technology with proven methodologies
