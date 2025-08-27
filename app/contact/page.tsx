@@ -13,7 +13,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: 'Email',
-    details: 'contact@peop360.com',
+    details: 'info@peop360.com',
     action: 'mailto:contact@peop360.com'
   },
   {
@@ -25,7 +25,8 @@ const contactInfo = [
   {
     icon: MapPin,
     title: 'Address',
-    details: 'Business Hub, Delhi NCR, India',
+    details: 'C-5/6 Ground Floor,Vasant Kunj, New Delhi 110070
+',
     action: '#'
   }
 ];
