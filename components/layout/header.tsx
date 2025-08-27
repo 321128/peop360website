@@ -2,12 +2,25 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, X, ChevronDown } from 'lucide-react';
 
-const navigation = [
+interface NavItemChild {
+  name: string;
+  href: string;
+  external?: boolean;
+}
+
+interface NavItem {
+  name: string;
+  href: string;
+  children?: NavItemChild[];
+}
+
+const navigation: NavItem[] = [
   {
     name: 'Solutions',
     href: '/solutions',
@@ -17,7 +30,13 @@ const navigation = [
       { name: 'Training', href: '/training' }
     ]
   },
-  { name: 'Industries', href: '/industries' },
+  {
+    name: 'Industries',
+    href: '/industries',
+    children: [
+      { name: 'n8n Workflows', href: 'https://n8nflows.peop360.com', external: true }
+    ]
+  },
   { name: 'Store', href: '/store' },
   { name: 'About', href: '/about' },
   { name: 'Team', href: '/team' },
@@ -44,10 +63,13 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-teal-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">P</span>
-            </div>
-            <span className="text-xl font-bold text-gray-900">Peop360</span>
+            <Image
+              src="/Peop360_Primary Logo.png"
+              alt="Peop360 Logo"
+              width={120}
+              height={32}
+              className="h-8 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -58,7 +80,7 @@ export default function Header() {
                   <div className="relative">
                     <button
                       className={`flex items-center gap-1 text-sm font-medium transition-colors ${
-                        isActivePath(item.href) ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'
+                        isActivePath(item.href) ? 'text-primary' : 'text-gray-700 hover:text-accent'
                       }`}
                       onMouseEnter={() => setOpenDropdown(item.name)}
                       onMouseLeave={() => setOpenDropdown(null)}
@@ -77,7 +99,8 @@ export default function Header() {
                           <Link
                             key={child.name}
                             href={child.href}
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-accent/10 hover:text-accent transition-colors"
+                            {...(child.external && { target: '_blank', rel: 'noopener noreferrer' })}
                           >
                             {child.name}
                           </Link>
@@ -89,7 +112,7 @@ export default function Header() {
                   <Link
                     href={item.href}
                     className={`text-sm font-medium transition-colors ${
-                      isActivePath(item.href) ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'
+                      isActivePath(item.href) ? 'text-primary' : 'text-gray-700 hover:text-accent'
                     }`}
                   >
                     {item.name}
@@ -101,7 +124,7 @@ export default function Header() {
 
           {/* CTA Button */}
           <div className="hidden lg:flex items-center gap-4">
-            <Button asChild className="bg-blue-600 hover:bg-blue-700 text-white">
+            <Button asChild className="bg-primary hover:bg-[#c7641e] text-white shadow-md rounded-lg">
               <Link href="/book">Book a Call</Link>
             </Button>
           </div>
@@ -116,10 +139,13 @@ export default function Header() {
             <SheetContent side="right" className="w-80">
               <div className="flex items-center justify-between mb-8">
                 <Link href="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
-                  <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-teal-600 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">P</span>
-                  </div>
-                  <span className="text-xl font-bold text-gray-900">Peop360</span>
+                  <Image
+                    src="/Peop360_Primary Logo.png"
+                    alt="Peop360 Logo"
+                    width={120}
+                    height={32}
+                    className="h-8 w-auto"
+                  />
                 </Link>
                 <Button variant="ghost" size="sm" onClick={() => setIsOpen(false)}>
                   <X className="h-6 w-6" />
@@ -133,7 +159,7 @@ export default function Header() {
                       <div>
                         <button
                           onClick={() => toggleDropdown(item.name)}
-                          className="flex items-center justify-between w-full text-left text-gray-700 hover:text-blue-600 font-medium py-2"
+                          className="flex items-center justify-between w-full text-left text-gray-700 hover:text-accent font-medium py-2"
                         >
                           {item.name}
                           <ChevronDown className={`h-4 w-4 transition-transform ${openDropdown === item.name ? 'rotate-180' : ''}`} />
@@ -144,8 +170,9 @@ export default function Header() {
                               <Link
                                 key={child.name}
                                 href={child.href}
-                                className="block text-gray-600 hover:text-blue-600 py-1"
+                                className="block text-gray-600 hover:text-accent py-1"
                                 onClick={() => setIsOpen(false)}
+                                {...(child.external && { target: '_blank', rel: 'noopener noreferrer' })}
                               >
                                 {child.name}
                               </Link>
@@ -156,8 +183,8 @@ export default function Header() {
                     ) : (
                       <Link
                         href={item.href}
-                        className={`block text-gray-700 hover:text-blue-600 font-medium py-2 ${
-                          isActivePath(item.href) ? 'text-blue-600' : ''
+                        className={`block text-gray-700 hover:text-accent font-medium py-2 ${
+                          isActivePath(item.href) ? 'text-primary' : ''
                         }`}
                         onClick={() => setIsOpen(false)}
                       >

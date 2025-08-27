@@ -23,6 +23,7 @@ const config: Config = {
         primary: {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))',
+          hover: 'hsl(var(--primary-hover))', // New hover color
         },
         secondary: {
           DEFAULT: 'hsl(var(--secondary))',
@@ -43,6 +44,7 @@ const config: Config = {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
+        'hero-headline': 'hsl(var(--hero-headline))', // New color for hero headlines
         chart: {
           '1': 'hsl(var(--chart-1))',
           '2': 'hsl(var(--chart-2))',
@@ -52,12 +54,12 @@ const config: Config = {
         },
       },
       borderRadius: {
-        lg: 'var(--radius)',
+        lg: 'var(--radius)', // 8px
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['Inter', 'Poppins', 'sans-serif'],
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

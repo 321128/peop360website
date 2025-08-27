@@ -238,8 +238,8 @@ export default function ContactPage() {
               <Card className="border-0 shadow-lg bg-gradient-to-br from-gray-50 to-white">
                 <CardContent className="p-6">
                   <h3 className="font-semibold text-gray-900 mb-2">Office Location</h3>
-                  <div className="aspect-video bg-gray-200 rounded-lg flex items-center justify-center">
-                    <p className="text-gray-500">Interactive Map Placeholder</p>
+                  <div className="aspect-video rounded-lg overflow-hidden">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d28039.928674227835!2d77.1887634!3d28.5399877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1755869315661!5m2!1sen!2sin" width="600" height="450" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                   </div>
                 </CardContent>
               </Card>

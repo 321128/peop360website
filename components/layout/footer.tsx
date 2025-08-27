@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Linkedin, Twitter, Instagram, Youtube, Mail, Phone, MapPin } from 'lucide-react';
@@ -50,10 +51,13 @@ export default function Footer() {
             {/* Company Info */}
             <div className="lg:col-span-1">
               <Link href="/" className="flex items-center gap-2 mb-6">
-                <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-teal-500 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">P</span>
-                </div>
-                <span className="text-xl font-bold">Peop360</span>
+                <Image
+                  src="/Peop360_Primary Logo.png"
+                  alt="Peop360 Logo"
+                  width={120}
+                  height={32}
+                  className="h-8 w-auto"
+                />
               </Link>
               
               <p className="text-gray-400 mb-6">

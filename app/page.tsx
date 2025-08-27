@@ -61,34 +61,34 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-teal-50 pt-20 pb-16">
+      <section className="relative overflow-hidden bg-white pt-20 pb-16">
         <div className="absolute inset-0 bg-grid-pattern opacity-5" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-4xl md:text-6xl font-bold text-hero-headline mb-6 leading-tight">
               Transform People Decisions with{' '}
-              <span className="bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
+              <span className="text-primary">
                 AI, Assessments & Training
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Revolutionizing HR and education with evidence-based diagnostics, adaptive automation, 
+            <p className="text-xl md:text-2xl text-foreground mb-8 max-w-4xl mx-auto leading-relaxed">
+              Revolutionizing HR and education with evidence-based diagnostics, adaptive automation,
               and globally benchmarked professional development programs.
             </p>
             
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
+              <Button asChild size="lg" className="bg-primary hover:bg-primary-hover text-primary-foreground">
                 <Link href="/solutions">
                   Explore Peop360 Solutions <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-teal-600 text-teal-600 hover:bg-teal-50">
+              <Button asChild variant="outline" size="lg" className="border-accent text-accent hover:bg-accent/10">
                 <Link href="/store">
                   Visit Assessment Store
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-blue-600 text-blue-600 hover:bg-blue-50">
+              <Button asChild variant="outline" size="lg" className="border-primary text-primary hover:bg-primary/10">
                 <Link href="/book">
                   Book a Strategy Call
                 </Link>
@@ -269,12 +269,12 @@ export default function HomePage() {
                 Book 15-min Discovery Call
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-blue-600">
+            <Button asChild variant="outline" size="lg" className="border-white text-blue-600 hover:bg-blue-600 hover:text-white">
               <Link href="/book">
                 Schedule 30-min Strategy Session
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-blue-600">
+            <Button asChild variant="outline" size="lg" className="border-white text-blue-600 hover:bg-blue-600 hover:text-white">
               <Link href="/book">
                 Book 60-min Deep Dive
               </Link>
