@@ -52,7 +52,7 @@ export default function Footer() {
             <div className="lg:col-span-1">
               <Link href="/" className="flex items-center gap-2 mb-6">
                 <Image
-                  src="/Peop360_Primary Logo.png"
+                  src="/img.png"
                   alt="Peop360 Logo"
                   width={120}
                   height={32}
