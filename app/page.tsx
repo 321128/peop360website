@@ -37,7 +37,7 @@ const pillars = [
     title: 'AI Services',
     description: 'Customised Content Generation with efficient subscription packages to fit client requirement.',
     icon: Brain, // Using Brain icon for AI Services, can be changed if a more suitable icon is available
-    features: ['Custom Content Generation', 'Efficient Subscription Packages', 'Client Requirement Fit', 'Scalable AI Solutions']
+    features: ['Custom Content Generation', 'Efficient Subscription Packages', 'Client Requirement Fit', 'Scalable AI Solutions', 'Operation and supply chain, demand forecasting for inventory planning and many more as per organizational requirement']
   }
 ];
 
