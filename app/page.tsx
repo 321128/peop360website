@@ -16,7 +16,7 @@ const stats = [
 
 const pillars = [
   {
-    title: 'Behavioral Assessments',
+    title: 'Behavioural, Competency and wellness Assessments',
     description: 'Indian-normed, multilingual assessments for leadership profiling, cognitive evaluation, and cultural fit analysis.',
     icon: Users,
     features: ['16-Type Personality Assessment', 'Cognitive & Aptitude Tests', 'Cultural Fit Analysis', 'Wellness Screening']
@@ -78,7 +78,7 @@ export default function HomePage() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-foreground mb-8 max-w-4xl mx-auto leading-relaxed">
-              Revolutionizing HR and education with evidence-based diagnostics, adaptive automation,
+              Revolutionizing people and process with evidence-based diagnostics, adaptive automation,
               and globally benchmarked professional development programs.
             </p>
             
