@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import Image from 'next/image';
+// Using standard img tags for static export simplicity
+// import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Linkedin, Twitter, Instagram, Youtube, Mail, Phone, MapPin } from 'lucide-react';
@@ -51,7 +52,7 @@ export default function Footer() {
             {/* Company Info */}
             <div className="lg:col-span-1">
               <Link href="/" className="flex items-center gap-2 mb-6">
-                <Image
+                <img
                   src="/img.png"
                   alt="Peop360 Logo"
                   width={120}

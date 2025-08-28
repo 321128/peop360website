@@ -2,7 +2,8 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+// Using standard img tags for static export simplicity
+// import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
@@ -63,7 +64,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <Image
+            <img
               src="/Peop360_Primary Logo.png"
               alt="Peop360 Logo"
               width={120}
@@ -139,7 +140,7 @@ export default function Header() {
             <SheetContent side="right" className="w-80">
               <div className="flex items-center justify-between mb-8">
                 <Link href="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
-                  <Image
+                  <img
                     src="/Peop360_Primary Logo.png"
                     alt="Peop360 Logo"
                     width={120}

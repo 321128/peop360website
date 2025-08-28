@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ArrowRight, Users, Brain, TrendingUp, Shield, Globe, Award, BarChart3, Target, Zap, CheckCircle } from 'lucide-react';
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 
 const stats = [
   { value: '500,000+', label: 'Assessments Delivered', icon: Users },
@@ -19,25 +20,29 @@ const pillars = [
     title: 'Behavioural, Competency and wellness Assessments',
     description: 'Indian-normed, multilingual assessments for leadership profiling, cognitive evaluation, and cultural fit analysis.',
     icon: Users,
-    features: ['16-Type Personality Assessment', 'Cognitive & Aptitude Tests', 'Cultural Fit Analysis', 'Wellness Screening']
+    features: ['16-Type Personality Assessment', 'Cognitive & Aptitude Tests', 'Cultural Fit Analysis', 'Wellness Screening'],
+    useCase: 'Our assessments provide Indian-normed, multilingual tools for leadership profiling, cognitive evaluation, and cultural fit analysis, helping organizations make informed decisions about talent acquisition and development.'
   },
   {
     title: 'AI Workflow Automation',
     description: 'n8n-powered workflows for recruitment, onboarding, L&D, and student lifecycle management with seamless integrations.',
     icon: Zap,
-    features: ['Recruitment Automation', 'Onboarding Workflows', 'L&D Management', 'WhatsApp Integration']
+    features: ['Recruitment Automation', 'Onboarding Workflows', 'L&D Management', 'WhatsApp Integration'],
+    useCase: 'Leverage n8n-powered workflows for seamless automation across recruitment, onboarding, learning & development, and student lifecycle management. Integrate with existing systems to streamline processes and enhance efficiency.'
   },
   {
     title: 'AMA Training Programs',
     description: 'Professional development through AMA South Asia partnership with diagnostics-driven program selection.',
     icon: Award,
-    features: ['Leadership Development', 'Communication Skills', 'Management Training', 'Compliance Programs']
+    features: ['Leadership Development', 'Communication Skills', 'Management Training', 'Compliance Programs'],
+    useCase: 'Through our partnership with AMA South Asia, we offer professional development programs with diagnostics-driven selection. These programs focus on leadership development, communication skills, management training, and compliance, tailored to individual and organizational needs.'
   },
   {
     title: 'AI Services',
     description: 'Customised Content Generation with efficient subscription packages to fit client requirement.',
     icon: Brain, // Using Brain icon for AI Services, can be changed if a more suitable icon is available
-    features: ['Custom Content Generation', 'Efficient Subscription Packages', 'Client Requirement Fit', 'Scalable AI Solutions', 'Operation and supply chain, demand forecasting for inventory planning and many more as per organizational requirement']
+    features: ['Custom Content Generation', 'Efficient Subscription Packages', 'Client Requirement Fit', 'Scalable AI Solutions', 'Operation and supply chain, demand forecasting for inventory planning and many more as per organizational requirement'],
+    useCase: `Our AI Services offer customized content generation with efficient subscription packages. We provide solutions for Human Resources & Talent Management (AI-powered recruitment, employee sentiment analysis, personalized L&D, predictive attrition), Sales & Marketing (AI-driven customer insights, conversational AI chatbots, predictive sales forecasting, content generation), Operations & Supply Chain (demand forecasting, logistics optimization, fraud detection, process automation), Decision Making & Strategy (AI-powered dashboards, scenario modeling), and Corporate Training & Well-being (AI-based microlearning, mental health chatbots, gamified assessments).`
   }
 ];
 
@@ -78,8 +83,7 @@ export default function HomePage() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-foreground mb-8 max-w-4xl mx-auto leading-relaxed">
-              Revolutionizing people and process with evidence-based diagnostics, adaptive automation,
-              and globally benchmarked professional development programs.
+              Revolutionizing people and process
             </p>
             
             {/* CTA Buttons */}
@@ -127,7 +131,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Three Pillars */}
+      {/* Four Pillars */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -156,8 +160,24 @@ export default function HomePage() {
                       </li>
                     ))}
                   </ul>
+                  <div className="mt-6 text-center">
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Button variant="outline" className="mt-4">Learn More</Button>
+                      </DialogTrigger>
+                      <DialogContent className="sm:max-w-[425px] p-6 rounded-lg shadow-lg bg-white relative overflow-visible dialog-3d">
+                        <DialogHeader>
+                          <DialogTitle className="text-2xl font-bold text-gray-900 mb-2">{pillar.title} Use Case</DialogTitle>
+                          <DialogDescription className="text-gray-600">
+                            {pillar.useCase}
+                          </DialogDescription>
+                        </DialogHeader>
+                      </DialogContent>
+                    </Dialog>
+                  </div>
                 </CardContent>
               </Card>
+
             ))}
           </div>
         </div>
