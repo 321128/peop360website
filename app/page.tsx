@@ -16,7 +16,7 @@ const stats = [
 
 const pillars = [
   {
-    title: 'Behavioural, Competency and wellness Assessments',
+    title: 'Behavioural,  and wellness Assessments',
     description: 'Indian-normed, multilingual assessments for leadership profiling, cognitive evaluation, and cultural fit analysis.',
     icon: Users,
     features: ['16-Type Personality Assessment', 'Cognitive & Aptitude Tests', 'Cultural Fit Analysis', 'Wellness Screening']
